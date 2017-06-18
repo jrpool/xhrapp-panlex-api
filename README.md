@@ -7,11 +7,11 @@ Project Members:
 
 ## Installation and Setup
 
-0. These instructions presuppose that (npm)[npm] is installed.
+0. These instructions presuppose that [npm][npm] is installed.
 
 1. Make the parent directory of what will be the project’s directory your working directory.
 
-2. Create the project directory (“projdir”, or whatever you wish to call it) and clone this repository into it, in a single step, by executing:
+2. Clone this repository into it, thereby creating the project directory (“projdir”, or whatever you wish to call it), by executing:
 
   git clone git@github.com:jrpool/xhrapp.git projdir
 
@@ -36,6 +36,6 @@ directories by executing:
 
 ## Resources
 
-[chai]: https://chaijs.org/
+[chai]: https://chaijs.com/
 [mocha]: https://mochajs.org/
 [npm]: https://www.npmjs.com/
