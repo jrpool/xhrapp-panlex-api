@@ -19,7 +19,7 @@ Project Members:
 
   `cd projdir`
 
-3. Install required dependencies (see package.json) by executing:
+3. Install required dependencies (see `package.json`) by executing:
 
   `npm i`
 
