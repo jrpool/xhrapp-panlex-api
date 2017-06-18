@@ -7,7 +7,7 @@ Project Members:
 
 ## Installation and Setup
 
-0. These instructions presuppose that (npm)[npm] (https://nodejs.org/en/) is installed.
+0. These instructions presuppose that (npm)[npm] is installed.
 
 1. Make the parent directory of what will be the project’s directory your working directory.
 
