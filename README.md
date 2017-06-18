@@ -34,8 +34,6 @@ directories by executing:
 
 ## Usage and Examples
 
-## Resources
-
 [chai]: https://chaijs.com/
 [mocha]: https://mochajs.org/
 [npm]: https://www.npmjs.com/
