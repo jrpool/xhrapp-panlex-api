@@ -13,24 +13,24 @@ Project Members:
 
 2. Clone this repository into it, thereby creating the project directory (“projdir”, or whatever you wish to call it), by executing:
 
-&nbsp;&nbsp;`git clone git@github.com:jrpool/xhrapp.git projdir`
+    `git clone git@github.com:jrpool/xhrapp.git projdir`
 
 2. Make the project directory your working directory by executing:
 
-&nbsp;&nbsp;`cd projdir`
+    `cd projdir`
 
 3. Install required dependencies (see `package.json`) by executing:
 
-&nbsp;&nbsp;`npm i`
+    `npm i`
 
 3. Perform the provided tests by executing:
 
-&nbsp;&nbsp;`npm test`
+    `npm test`
 
 4. In the local directory, perform linting on the files in the `src` and `test`
 directories by executing:
 
-&nbsp;&nbsp;`npm run lint`
+    `npm run lint`
 
 ## Usage and Examples
 
