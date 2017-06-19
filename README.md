@@ -11,13 +11,13 @@ Project Members:
 
 1. Make the parent directory of what will be the project’s directory your working directory.
 
-2. Clone this repository into it, thereby creating the project directory (“projdir”, or whatever you wish to call it), by executing:
+2. Clone this repository into it, thereby creating the project directory, by executing:
 
-    `git clone git@github.com:jrpool/xhrapp.git projdir`
+    `git clone git@github.com:jrpool/xhrapp.git xhrapp`
 
 2. Make the project directory your working directory by executing:
 
-    `cd projdir`
+    `cd xhrapp`
 
 3. Install required dependencies (see `package.json`) by executing:
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>XMLHTTPRequest Demonstration</title>
+  </head>
+
+  <body>
+    <script src="src/app.js"></script>
+
+    <h3>What are we demonstrating?</h3>
+
+    <p>When you open this page, it does not contain any data, but it does contain code that requests a page from a server, on receipt of the page parses it to get some information about it, and then inserts that information into this page below. That is what this page demonstrates.</p>
+
+    <p>The request is sent to the <a href="https://apps.panlex.org/panlinx/ex/391632">PanLinx interface of the <a href="https://dev.panlex.org">PanLex</a> database.</a></p>
+
+    <p>The request asks the interface to look up the English word “demonstration” in the database of about 25 million expressions in about 11,000 language varieties, and to return to us a list of the translations of that expression recorded in the database. This page’s code then counts those translations and inserts the count below.</p>
+
+    <p>If the answer appears shortly after you open this page, then the code is working correctly.</p>
+
+    <h2>Answer: <span id="count"></span></h2>
+
+  </body>
+
+</html>
