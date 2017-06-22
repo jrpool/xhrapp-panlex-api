@@ -6,7 +6,7 @@
 */
 const giveResponse = (requester) => {
   // If the response has arrived and there was no error:
-  if (requester.readystate === 4 && requester.status === 200) {
+  if (requester.readyState === 4 && requester.status === 200) {
     // Return it.
     return requester.responseText;
   }
@@ -54,14 +54,15 @@ const xhr = new XMLHttpRequest();
 xhr.open('POST', langvarCountUrl);
 
 // Make the request.
-xhr.send(expressionConstraint);
+xhr.send(expressionConstraint(expression));
 
 /*
   Create a function that replaces the content of the element having ID “count”
   with the response, if complete, of the PanLex API to the requester’s request.
 */
 const replaceLangvarCount = () => {
-  countReplace(giveResponse(xhr));
+  const response = giveResponse(xhr);
+  if (response) countReplace(response);
 };
 
 /*
