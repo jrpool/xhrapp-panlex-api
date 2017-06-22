@@ -1,4 +1,4 @@
-# xhrapp
+# xhrapp-panlex-api
 Basic web app illustrating use of XMLHTTPRequest to get information from the PanLex API
 
 Project Members:
