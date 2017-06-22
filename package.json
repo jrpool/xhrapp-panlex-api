@@ -1,19 +1,13 @@
 {
-  "name": "xhrapp",
+  "name": "xhrapp-panlex-api",
   "description": "Basic web app illustrating use of XMLHTTPRequest to get information from the PanLex API",
   "author": "Jonathan Pool",
   "license": "MIT",
   "private": false,
   "version": "0.0.0",
   "dependencies": {},
-  "devDependencies": {
-    "babel-cli": ">=6.24.1",
-    "babel-preset-env": ">=1.5.2",
-    "babel-preset-latest": ">=6.24.1",
-    "babel-register": ">=6.24.1"
-  },
-  "scripts": {
-  },
+  "devDependencies": {},
+  "scripts": {},
   "bugs": {
     "url": "https://github.com/jrpool/xhrapp-panlex-api.git/issues"
   },
