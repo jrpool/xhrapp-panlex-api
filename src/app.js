@@ -61,7 +61,8 @@ xhr.send(expressionConstraint(expression));
   with the response, if complete, of the PanLex API to the requester’s request.
 */
 const replaceLangvarCount = () => {
-  countReplace(giveResponse(xhr));
+  const response = giveResponse(xhr);
+  if (response) countReplace(response);
 };
 
 /*
