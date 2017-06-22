@@ -13,7 +13,7 @@ Project Members:
 
 2. Clone this repository into it, thereby creating the project directory, by executing:
 
-    `git clone git@github.com:jrpool/xhrapp.git xhrapp-panlex-api`
+    `git clone git@github.com:jrpool/xhrapp-panlex-api.git xhrapp-panlex-api`
 
 2. Make the project directory your working directory by executing:
 
