@@ -54,7 +54,7 @@ const xhr = new XMLHttpRequest();
 xhr.open('POST', langvarCountUrl);
 
 // Make the request.
-xhr.send(expressionConstraint);
+xhr.send(expressionConstraint(expression));
 
 /*
   Create a function that replaces the content of the element having ID “count”
