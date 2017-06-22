@@ -1,5 +1,5 @@
 # xhrapp
-Basic web app illustrating use of XMLHTTPRequest
+Basic web app illustrating use of XMLHTTPRequest to get information from the PanLex API
 
 Project Members:
 
@@ -13,27 +13,18 @@ Project Members:
 
 2. Clone this repository into it, thereby creating the project directory, by executing:
 
-    `git clone git@github.com:jrpool/xhrapp.git xhrapp`
+    `git clone git@github.com:jrpool/xhrapp.git xhrapp-panlex-api`
 
 2. Make the project directory your working directory by executing:
 
-    `cd xhrapp`
+    `cd xhrapp-panlex-api`
 
 3. Install required dependencies (see `package.json`) by executing:
 
     `npm i`
 
-3. Perform the provided tests by executing:
-
-    `npm test`
-
-4. In the local directory, perform linting on the files in the `src` and `test`
-directories by executing:
-
-    `npm run lint`
-
 ## Usage and Examples
 
-[chai]: https://chaijs.com/
-[mocha]: https://mochajs.org/
+Use this application by opening `index.html` in a web browser.
+
 [npm]: https://www.npmjs.com/

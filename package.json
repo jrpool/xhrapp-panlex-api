@@ -1,6 +1,6 @@
 {
   "name": "xhrapp",
-  "description": "Basic web app illustrating use of XMLHTTPRequest",
+  "description": "Basic web app illustrating use of XMLHTTPRequest to get information from the PanLex API",
   "author": "Jonathan Pool",
   "license": "MIT",
   "private": false,
@@ -10,73 +10,16 @@
     "babel-cli": ">=6.24.1",
     "babel-preset-env": ">=1.5.2",
     "babel-preset-latest": ">=6.24.1",
-    "babel-register": ">=6.24.1",
-    "chai": ">=4.0.2",
-    "eslint": "^4.0.0",
-    "mocha": ">=3.4.2"
+    "babel-register": ">=6.24.1"
   },
   "scripts": {
-    "lint": "./node_modules/eslint/bin/eslint.js src/ test/; exit 0",
-    "lintfix": "./node_modules/eslint/bin/eslint.js --fix src/ test/; exit 0",
-    "test": "mocha --compilers js:babel-register test/*.js"
   },
   "bugs": {
-    "url": "https://github.com/jrpool/xhrapp.git/issues"
+    "url": "https://github.com/jrpool/xhrapp-panlex-api.git/issues"
   },
-  "homepage": "https://github.com/jrpool/xhrapp.git/index.html",
+  "homepage": "https://github.com/jrpool/xhrapp-panlex-api.git/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jrpool/xhrapp.git"
-  },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true,
-      "mocha": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "sourceType": "module"
-    },
-    "rules": {
-      "indent": [
-        "error",
-        2
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "no-array-constructor": [
-        "error"
-      ],
-      "no-cond-assign": [
-        "off"
-      ],
-      "no-console": [
-        "off"
-      ],
-      "no-const-assign": [
-        "error"
-      ],
-      "no-new-object": [
-        "error"
-      ],
-      "no-var": [
-        "error"
-      ],
-      "prefer-const": [
-        "error"
-      ],
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi": [
-        "error",
-        "always"
-      ]
-    }
+    "url": "https://github.com/jrpool/xhrapp-panlex-api.git"
   }
 }
