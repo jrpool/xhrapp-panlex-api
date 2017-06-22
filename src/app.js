@@ -6,7 +6,7 @@
 */
 const giveResponse = (requester) => {
   // If the response has arrived and there was no error:
-  if (requester.readystate === 4 && requester.status === 200) {
+  if (requester.readyState === 4 && requester.status === 200) {
     // Return it.
     return requester.responseText;
   }
