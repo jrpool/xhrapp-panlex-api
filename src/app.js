@@ -1,24 +1,21 @@
 // XMLHttpRequest demonstration
 
 /*
-  Create a function that returns the response received by a specified
-  XMLHTTP requester.
+  Function that returns the response received by a specified
+  XMLHTTP requester, or undefined if not yet received or the response status
+  is an error.
 */
-const giveResponse = (requester) => {
-  // If the response has arrived and there was no error:
-  if (requester.readyState === 4 && requester.status === 200) {
-    // Return it.
-    return requester.responseText;
-  }
-};
+const giveResponse =
+  requester =>
+    requester.readyState === 4 && requester.status === 200
+    ? requester.responseText : undefined;
 
 /*
-  Create a function that replaces the text content of the element having a
+  Function that replaces the text content of the document’s element having a
   specified ID with the specified text.
 */
-const elementFill = (id, text) => {
-  document.getElementById(id).textContent = text;
-};
+const elementFill =
+  (id, text) => {document.getElementById(id).textContent = text;};
 
 /*
   Identify the URL for a request to the PanLex API for a count of language
@@ -27,21 +24,20 @@ const elementFill = (id, text) => {
 const langvarCountUrl = 'http://api.panlex.org/v2/langvar/count';
 
 /*
-  Create a function that returns the data for a POST request to the PanLex API
+  Function that returns the data for a POST request to the PanLex API
   for information about language varieties containing a specified expression.
 */
-const expressionConstraint = (expression) => {
-  return JSON.stringify({'expr_txt': expression});
-};
+const expressionConstraint =
+  expression => JSON.stringify({expr_txt: expression});
 
 /*
-  Create a function that replaces the content of the elemant having ID “count” with the value of the “count” property of a specified object.
+  Create a function that replaces the content of the document’s element having
+  ID “count” with the value of the “count” property of a specified object.
 */
-const countReplace = (object) => {
-  elementFill('count', JSON.parse(object).count);
-};
+const countReplace =
+  object => elementFill('count', JSON.parse(object).count);
 
-// Identify an expression.
+// Identify the expression the language varieties are to contain.
 const expression = 'demonstration';
 
 // Create an XMLHTTP requester.
@@ -57,8 +53,9 @@ xhr.open('POST', langvarCountUrl);
 xhr.send(expressionConstraint(expression));
 
 /*
-  Create a function that replaces the content of the element having ID “count”
-  with the response, if complete, of the PanLex API to the requester’s request.
+  Function that replaces the content of the document’s element having ID
+  “count” with the response, if complete, of the PanLex API to the
+  requester’s request.
 */
 const replaceLangvarCount = () => {
   const response = giveResponse(xhr);
