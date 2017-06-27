@@ -1,5 +1,7 @@
 // XMLHttpRequest demonstration
 
+// GENERIC FUNCTIONS
+
 /*
   Function that returns the response received by a specified XMLHTTP requester,
   or undefined if not yet received.
@@ -15,13 +17,16 @@ const giveResponse =
 const elementFill =
   (id, text) => {document.getElementById(id).textContent = text;};
 
+// SPECIFIC FUNCTIONS
+
 /*
-  Function that returns the JSON string that limits the language varieties
-  subject to such a request to those containing expressions having a
-  specified text.
+  Function that returns the JSON-formatted POST data required by the
+  PanLex API in a language-variety request if the language varieties
+  subject to the request are to be limited to those containing expressions
+  having a specified text.
 */
 const expressionConstraint =
-  expression => JSON.stringify({expr_txt: expression});
+  text => JSON.stringify({expr_txt: text});
 
 /*
   Function that replaces the content of the document’s element having ID
@@ -33,40 +38,44 @@ const countReplaceWith =
 
 /*
   Function that replaces the content of the document’s element having ID
-  “count” with the response, if complete, to the requester’s request.
+  “count” with the response, if any, in a specified event.
 */
-const replaceLangvarCount = (event) => {
+const replaceLangvarCount = event => {
   const response = giveResponse(event.target);
   if (response) countReplaceWith(response);
 };
 
-/*
-  Identify the URL for a request to the PanLex API for a count of language
-  varieties.
-*/
+// CONSTANTS
+
+// URL for a request to the PanLex API for a count of language varieties.
 const langvarCountUrl = 'http://api.panlex.org/v2/langvar/count';
 
-// Identify the text of the expressions the language varieties are to contain.
+/*
+  Text of the expressions the language varieties subject to a request to
+  the PanLex API must contain.
+*/
 const expressionText = 'tam';
 
-// Create an XMLHTTP requester.
+// XMLHTTP requester.
 const xhr = new XMLHttpRequest();
 
+// ACTIONS
+
 /*
-  Configure a request by it to the PanLex API for a count of language
-  varieties.
+  Configure a request by the XMLHTTP requester to the PanLex API for a count
+  of language varieties.
 */
 xhr.open('POST', langvarCountUrl);
 
 /*
-  Make the request, limited to language varieties containing expressions
-  having the identified text.
+  Make the request, including POST data limiting the request to language
+  varieties containing expressions having the identified text.
 */
 
 xhr.send(expressionConstraint(expressionText));
 
 /*
-  When the response to the request is complete, make the object replace the
-  element having ID “count” with the reported count.
+  If and when the response to the request is complete, replace the element
+  having ID “count” with the count reported in the response.
 */
 xhr.addEventListener('readystatechange', replaceLangvarCount);
