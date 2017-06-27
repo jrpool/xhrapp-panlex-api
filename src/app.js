@@ -2,13 +2,8 @@
 
 // GENERIC FUNCTIONS
 
-/*
-  Function that returns the response received by a specified XMLHTTP requester,
-  or undefined if not yet received.
-*/
-const giveResponse =
-  requester =>
-    requester.readyState === 4 && requester.status === 200 ? requester.responseText : undefined;
+// Function that returns the response received by a specified XMLHTTP requester.
+const giveResponse = requester => requester.responseText;
 
 /*
   Function that replaces the text content of the document’s element having a
@@ -54,7 +49,7 @@ const langvarCountUrl = 'http://api.panlex.org/v2/langvar/count';
   Text of the expressions the language varieties subject to a request to
   the PanLex API must contain.
 */
-const expressionText = 'tam';
+const expressionText = 'мир';
 
 // XMLHTTP requester.
 const xhr = new XMLHttpRequest();
@@ -78,4 +73,4 @@ xhr.send(expressionConstraint(expressionText));
   If and when the response to the request is complete, replace the element
   having ID “count” with the count reported in the response.
 */
-xhr.addEventListener('readystatechange', replaceLangvarCount);
+xhr.addEventListener('load', replaceLangvarCount);
