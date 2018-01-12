@@ -43,7 +43,7 @@ const replaceLangvarCount = event => {
 // CONSTANTS
 
 // URL for a request to the PanLex API for a count of language varieties.
-const langvarCountUrl = 'http://api.panlex.org/v2/langvar/count';
+const langvarCountUrl = 'https://api.panlex.org/v2/langvar/count';
 
 /*
   Text of the expressions the language varieties subject to a request to

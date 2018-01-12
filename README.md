@@ -17,6 +17,10 @@ The `xhr` object inherits the methods `open`, `send`, and `addEventListener` fro
 
 This application succeeds in retrieving data from the PanLex API because that API includes “access-control-allow-origin: *” in its response headers. When an XMLHttpRequest requester on a web page served by server A proposes to send a request to server B, popular web browsers require server B to include that header in its response as a condition of permitting the request to be sent and the response to it to be processed. You can see the response headers by opening your browser’s developer tools to the Network/XHR/Headers pane and refreshing the page.
 
+## Demonstration
+
+This application can be demonstrated at https://jpdev.pro/xhrapp-panlex-api/.
+
 ## Installation and Setup
 
 0. These instructions presuppose that [npm][npm] is installed.
